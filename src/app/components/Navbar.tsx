@@ -13,7 +13,7 @@ export default function Navbar() {
   const navLinks = [
     { href: "/", label: "Home" },
     { href: "/about", label: "About Us" },
-    { href: "/service", label: "Our Services" }, // Fixed typo: "service" to "services"
+    { href: "/service", label: "Our Services" },
     { href: "/contact", label: "Contact Us" },
   ];
 
