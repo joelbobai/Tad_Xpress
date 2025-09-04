@@ -25,15 +25,19 @@ export default function DashboardLayout({
   return (
     <div className="flex min-h-screen bg-gray-100">
       <aside className="flex w-64 flex-col bg-white p-6 shadow-sm">
+
         <div className="mb-8 text-2xl font-bold text-brand-primary">TadXpress</div>
+
         <nav className="space-y-2">
           {links.map(({ href, label, icon: Icon }) => (
             <Link
               key={href}
               href={href}
+
               className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium hover:bg-brand-primary-light ${
                 pathname === href
                   ? "bg-brand-primary-light text-brand-primary-dark"
+
                   : "text-gray-700"
               }`}
             >
@@ -48,7 +52,9 @@ export default function DashboardLayout({
           <input
             type="text"
             placeholder="Search anything here..."
+
             className="w-full max-w-md rounded-lg border px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-brand-primary"
+
           />
           <div className="ml-4 flex items-center gap-3">
             <Image
