@@ -17,6 +17,7 @@ export default function Navbar() {
     { href: "/contact", label: "Contact Us" },
     { href: "/login", label: "Login" },
     { href: "/signup", label: "Sign Up" },
+
     { href: "/dashboard", label: "Dashboard" },
   ];
 
