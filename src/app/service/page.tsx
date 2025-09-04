@@ -12,7 +12,6 @@ import {
   Users,
   Heart,
   CheckCircle,
-  ArrowRight,
   Globe,
   Award,
   Headphones,
