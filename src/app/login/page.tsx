@@ -4,7 +4,6 @@ import { useRouter } from "next/navigation";
 
 import Link from "next/link";
 
-
 export default function Login() {
   const router = useRouter();
   const [email, setEmail] = useState("");
@@ -20,7 +19,7 @@ export default function Login() {
       <div className="grid w-full max-w-4xl grid-cols-1 overflow-hidden rounded-xl bg-white shadow-lg md:grid-cols-2">
         <div className="relative hidden md:block">
           <img
-            src="/abstract-geometric-pattern.png"
+            src="https://images.unsplash.com/photo-1619741982598-7cb8a7959476?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg"
             alt="Background"
             className="h-full w-full object-cover"
           />
@@ -60,7 +59,7 @@ export default function Login() {
             </button>
           </form>
           <p className="mt-4 text-center text-sm text-[#626F47]">
-            Don&apos;t have an account? {" "}
+            Don&apos;t have an account?{" "}
             <Link href="/signup" className="text-[#FFCF50]">
               Sign Up
             </Link>

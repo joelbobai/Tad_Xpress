@@ -48,7 +48,7 @@ export default function DashboardLayout({
         <div>
           <div className="mb-8 flex items-center gap-2 px-2">
             <GlobeAltIcon className="h-6 w-6 text-blue-600" />
-            <span className="text-lg font-bold text-gray-800">GLOBALRIDE</span>
+            <span className="text-lg font-bold text-gray-800">TadXpress</span>
           </div>
           <nav className="space-y-1">
             {mainLinks.map(({ href, label, icon: Icon, badge }) => (
@@ -56,7 +56,9 @@ export default function DashboardLayout({
                 key={href + label}
                 href={href}
                 className={`flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium hover:bg-blue-50 ${
-                  pathname === href ? "bg-blue-50 text-blue-600" : "text-gray-700"
+                  pathname === href
+                    ? "bg-blue-50 text-blue-600"
+                    : "text-gray-700"
                 }`}
               >
                 <Icon className="h-5 w-5" />
@@ -87,10 +89,12 @@ export default function DashboardLayout({
       <div className="flex flex-1 flex-col">
         <header className="flex items-center justify-between bg-white px-6 py-4 shadow-sm">
           <div className="flex flex-1 items-center gap-4">
-            <div className="flex items-center gap-2">
+            {/* <div className="flex items-center gap-2">
               <GlobeAltIcon className="h-6 w-6 text-blue-600" />
-              <span className="text-lg font-semibold text-gray-800">GLOBALRIDE</span>
-            </div>
+              <span className="text-lg font-semibold text-gray-800">
+                GLOBALRIDEh
+              </span>
+            </div> */}
             <input
               type="text"
               placeholder="Search anything here..."
@@ -108,7 +112,9 @@ export default function DashboardLayout({
                 className="rounded-full"
               />
               <div className="text-left">
-                <p className="text-sm font-medium leading-tight">Peter Gross</p>
+                <p className="text-sm font-medium leading-tight text-black">
+                  Peter Gross
+                </p>
                 <p className="text-xs leading-tight text-gray-500">Driver</p>
               </div>
               <ChevronDownIcon className="h-4 w-4 text-gray-500" />
@@ -120,4 +126,3 @@ export default function DashboardLayout({
     </div>
   );
 }
-
