@@ -103,6 +103,7 @@ export default function Dashboard() {
           </div>
         </div>
 
+
         {/* Current trip */}
         <div className="rounded-xl bg-white p-4 shadow">
           <h2 className="mb-4 text-lg font-semibold text-brand-primary-dark">Current trip</h2>
@@ -139,6 +140,7 @@ export default function Dashboard() {
             </button>
           </div>
         </div>
+
 
         {/* Map */}
         <div className="rounded-xl bg-white p-4 shadow">
