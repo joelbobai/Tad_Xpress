@@ -1,5 +1,13 @@
 "use client";
-import { Calendar as CalendarIcon, Clock, MapPin, Star, TrendingUp, Bus } from "lucide-react";
+import {
+  Calendar as CalendarIcon,
+  Clock,
+  MapPin,
+  Star,
+  TrendingUp,
+  Bus,
+  ArrowUpRight,
+} from "lucide-react";
 
 export default function Dashboard() {
   return (
@@ -86,21 +94,22 @@ export default function Dashboard() {
             </div>
           </div>
 
-          {/* Rating */}
-          <div className="rounded-xl bg-white p-4 shadow">
-            <h2 className="mb-1 text-lg font-semibold text-brand-primary-dark">Rating</h2>
-            <p className="mb-2 text-xs text-gray-500">Based on 60 reviews</p>
-            <div className="flex items-center gap-1">
-              {Array.from({ length: 5 }).map((_, i) => (
-                <Star
-                  key={i}
-                  className={`h-5 w-5 ${i < 4 ? "text-brand-accent" : "text-gray-300"}`}
-                  fill={i < 4 ? "currentColor" : "none"}
-                />
-              ))}
-              <span className="ml-2 text-sm text-gray-600">4.8</span>
+        {/* Rating */}
+        <div className="rounded-xl bg-white p-4 shadow">
+          <div className="flex items-start justify-between">
+            <div>
+              <h2 className="text-sm font-medium text-[#111827]">Rating</h2>
+              <p className="text-xs text-[#6B7280]">Based on 68 reviews</p>
+            </div>
+            <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#EEF2FF]">
+              <ArrowUpRight className="h-4 w-4 text-[#5D5FEF]" />
             </div>
           </div>
+          <div className="mt-2 flex items-center gap-2">
+            <span className="text-4xl font-semibold text-[#111827]">4.8</span>
+            <Star className="h-6 w-6 text-[#7AC74F]" fill="currentColor" />
+          </div>
+        </div>
         </div>
 
 
