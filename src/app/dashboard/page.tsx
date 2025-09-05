@@ -1,9 +1,15 @@
 "use client";
-import { Clock, MapPin, Star, TrendingUp, Bus, ArrowUpRight } from "lucide-react";
+import {
+  Calendar as CalendarIcon,
+  Clock,
+  MapPin,
+  Star,
+  TrendingUp,
+  Bus,
+  ArrowUpRight,
+} from "lucide-react";
 
 export default function Dashboard() {
-  const blueDays = [2, 10, 23, 29];
-  const greenDays = [4, 15, 32];
   return (
     <main className="space-y-6">
       {/* Section 1: stats */}
@@ -71,26 +77,17 @@ export default function Dashboard() {
           {/* Calendar */}
           <div className="rounded-xl bg-white p-4 shadow">
             <div className="mb-4 flex items-center justify-between">
-              <h2 className="text-lg font-semibold text-[#111827]">Calendar</h2>
-              <div className="flex h-7 w-7 items-center justify-center rounded-full bg-[#EEF2FF]">
-                <ArrowUpRight className="h-4 w-4 text-[#5D5FEF]" />
-              </div>
+              <h2 className="text-lg font-semibold text-brand-primary-dark">Calendar</h2>
+              <CalendarIcon className="h-4 w-4 text-brand-primary" />
             </div>
-            <div className="mb-2 grid grid-cols-7 gap-2 text-center text-xs text-[#9CA3AF]">
-              {['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'].map((day) => (
-                <span key={day}>{day}</span>
-              ))}
-            </div>
-            <div className="grid grid-cols-7 gap-2">
-              {Array.from({ length: 35 }).map((_, i) => (
+            <div className="grid grid-cols-7 gap-2 text-center text-sm">
+              {Array.from({ length: 28 }).map((_, i) => (
                 <div
                   key={i}
-                  className={`aspect-square rounded-md ${
-                    blueDays.includes(i)
-                      ? 'bg-[#5D5FEF]'
-                      : greenDays.includes(i)
-                        ? 'bg-[#7AC74F]'
-                        : 'bg-[#E5E7EB]'
+                  className={`aspect-square rounded-lg ${
+                    [2, 6, 9, 12, 16, 20].includes(i)
+                      ? "bg-brand-primary"
+                      : "bg-brand-primary-light"
                   }`}
                 ></div>
               ))}
