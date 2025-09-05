@@ -9,12 +9,11 @@ export default function SignUp() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [role, setRole] = useState("user");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (password !== confirmPassword) return;
-    router.push(`/${role}/dashboard`);
+    router.push("/dashboard");
   };
 
   return (
@@ -22,7 +21,7 @@ export default function SignUp() {
       <div className="grid w-full max-w-4xl grid-cols-1 overflow-hidden rounded-xl bg-white shadow-lg md:grid-cols-2">
         <div className="relative hidden md:block">
           <img
-            src="https://images.unsplash.com/photo-1619741982598-7cb8a7959476?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+            src="/abstract-geometric-pattern.png"
             alt="Background"
             className="h-full w-full object-cover"
           />
@@ -38,24 +37,6 @@ export default function SignUp() {
             Create an Account
           </h1>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex justify-center gap-4">
-              {[
-                { value: "user", label: "User" },
-                { value: "rider", label: "Rider" },
-              ].map((opt) => (
-                <label key={opt.value} className="flex items-center gap-1 text-sm">
-                  <input
-                    type="radio"
-                    name="role"
-                    value={opt.value}
-                    checked={role === opt.value}
-                    onChange={(e) => setRole(e.target.value)}
-                    className="text-[#626F47]"
-                  />
-                  {opt.label}
-                </label>
-              ))}
-            </div>
             <input
               type="text"
               placeholder="Name"
@@ -89,11 +70,11 @@ export default function SignUp() {
               required
             />
             <p className="text-center text-xs text-[#626F47]">
-              By continuing you agree to our{" "}
+              By continuing you agree to our {" "}
               <Link href="#" className="text-[#FFCF50]">
                 Terms & Conditions
               </Link>{" "}
-              and{" "}
+              and {" "}
               <Link href="#" className="text-[#FFCF50]">
                 Privacy Policy
               </Link>
@@ -106,7 +87,7 @@ export default function SignUp() {
             </button>
           </form>
           <p className="mt-4 text-center text-sm text-[#626F47]">
-            Already have an account?{" "}
+            Already have an account? {" "}
             <Link href="/login" className="text-[#FFCF50]">
               Login
             </Link>

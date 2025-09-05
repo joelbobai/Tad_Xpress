@@ -1,17 +1,18 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+
 import Link from "next/link";
+
 
 export default function Login() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const [role, setRole] = useState("user");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    router.push(`/${role}/dashboard`);
+    router.push("/dashboard");
   };
 
   return (
@@ -19,7 +20,7 @@ export default function Login() {
       <div className="grid w-full max-w-4xl grid-cols-1 overflow-hidden rounded-xl bg-white shadow-lg md:grid-cols-2">
         <div className="relative hidden md:block">
           <img
-            src="https://images.unsplash.com/photo-1619741982598-7cb8a7959476?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg"
+            src="/abstract-geometric-pattern.png"
             alt="Background"
             className="h-full w-full object-cover"
           />
@@ -35,25 +36,6 @@ export default function Login() {
             Login to TadXpress
           </h1>
           <form onSubmit={handleSubmit} className="space-y-4">
-            <div className="flex justify-center gap-4">
-              {[
-                { value: "user", label: "User" },
-                { value: "rider", label: "Rider" },
-                { value: "admin", label: "Admin" },
-              ].map((opt) => (
-                <label key={opt.value} className="flex items-center gap-1 text-sm">
-                  <input
-                    type="radio"
-                    name="role"
-                    value={opt.value}
-                    checked={role === opt.value}
-                    onChange={(e) => setRole(e.target.value)}
-                    className="text-[#626F47]"
-                  />
-                  {opt.label}
-                </label>
-              ))}
-            </div>
             <input
               type="email"
               placeholder="Email"
@@ -78,7 +60,7 @@ export default function Login() {
             </button>
           </form>
           <p className="mt-4 text-center text-sm text-[#626F47]">
-            Don&apos;t have an account?{" "}
+            Don&apos;t have an account? {" "}
             <Link href="/signup" className="text-[#FFCF50]">
               Sign Up
             </Link>
