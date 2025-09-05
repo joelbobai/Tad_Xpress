@@ -103,40 +103,44 @@ export default function Dashboard() {
           </div>
         </div>
 
-          {/* Current trip */}
-          <div className="rounded-xl bg-white p-4 shadow">
-            <h2 className="mb-4 text-lg font-semibold text-brand-primary-dark">Current trip</h2>
-            <ol className="relative border-l border-blue-200">
-              <li className="relative mb-6 ml-6">
-                <span className="absolute -left-1.5 top-2 h-3 w-3 rounded-full bg-blue-600 ring-4 ring-white" />
-                <p className="text-gray-500">Departure</p>
-                <div className="flex items-center justify-between">
+
+        {/* Current trip */}
+        <div className="rounded-xl bg-white p-4 shadow">
+          <h2 className="mb-4 text-lg font-semibold text-brand-primary-dark">Current trip</h2>
+          <div className="relative pl-6">
+            <div className="absolute left-2 top-0 h-full w-px bg-brand-primary-light"></div>
+            <ul className="space-y-6 text-sm">
+              <li className="relative flex items-start justify-between">
+                <span className="absolute -left-4 top-1 h-3 w-3 rounded-full bg-brand-primary"></span>
+                <div className="max-w-[70%]">
+                  <p className="text-gray-500">Departure</p>
                   <p className="font-medium">Poznan, Bus Station</p>
-                  <span className="text-xs text-gray-400">12:45 AM</span>
                 </div>
+                <p className="text-xs text-gray-400">12:45 AM</p>
               </li>
-              <li className="relative mb-6 ml-6">
-                <MapPin className="absolute -left-2 top-1 h-4 w-4 text-blue-600" />
-                <p className="text-gray-500">Stop</p>
-                <div className="flex items-center justify-between">
+              <li className="relative flex items-start justify-between">
+                <MapPin className="absolute -left-4 top-1 h-3 w-3 text-gray-500" />
+                <div className="max-w-[70%]">
+                  <p className="text-gray-500">Stop</p>
                   <p className="font-medium">Berlin Airport BER, T 1/2</p>
-                  <span className="text-xs text-gray-400">4:05 AM</span>
                 </div>
+                <p className="text-xs text-gray-400">4:05 AM</p>
               </li>
-              <li className="relative ml-6">
-                <MapPin className="absolute -left-2 top-1 h-4 w-4 text-blue-600" />
-                <p className="text-gray-500">Arrival</p>
-                <div className="flex items-center justify-between">
+              <li className="relative flex items-start justify-between">
+                <MapPin className="absolute -left-4 top-1 h-3 w-3 text-gray-500" />
+                <div className="max-w-[70%]">
+                  <p className="text-gray-500">Arrival</p>
                   <p className="font-medium">Berlin Südkreuz</p>
-                  <span className="text-xs text-gray-400">4:30 AM</span>
                 </div>
+                <p className="text-xs text-gray-400">4:30 AM</p>
               </li>
-            </ol>
-            <div className="mt-6 flex items-center justify-center rounded-lg bg-blue-50 py-2 text-sm text-blue-700">
-              <Clock className="mr-2 h-4 w-4" />
+            </ul>
+            <button className="mt-6 w-full rounded-lg bg-brand-primary-light py-2 text-sm text-brand-primary">
               Duration: 3 hours 45 min
-            </div>
+            </button>
           </div>
+        </div>
+
 
         {/* Map */}
         <div className="rounded-xl bg-white p-4 shadow">
