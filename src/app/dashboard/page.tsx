@@ -106,11 +106,11 @@ export default function Dashboard() {
 
         {/* Current trip */}
         <div className="rounded-xl bg-white p-4 shadow">
-          <h2 className="mb-4 text-lg font-semibold text-brand-primary-dark">Current trip</h2>
 
-          <ul className="relative ml-4 space-y-6 text-sm before:absolute before:left-0 before:top-0 before:h-full before:w-0.5 before:bg-brand-primary-light before:content-['']">
+          <h2 className="mb-4 text-lg font-semibold text-[#4A5535]">Current trip</h2>
+          <ul className="relative ml-4 space-y-6 text-sm before:absolute before:left-0 before:top-0 before:h-full before:w-0.5 before:bg-[#8B9A6B] before:content-['']">
             <li className="relative pl-6">
-              <span className="absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-brand-primary"></span>
+              <span className="absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-[#626F47]"></span>
               <div className="flex justify-between gap-4">
 
                 <div className="max-w-[70%]">
@@ -122,7 +122,7 @@ export default function Dashboard() {
               </div>
             </li>
             <li className="relative pl-6">
-              <span className="absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-brand-accent"></span>
+              <span className="absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-[#FFCF50]"></span>
               <div className="flex justify-between gap-4">
 
                 <div className="max-w-[70%]">
@@ -134,7 +134,7 @@ export default function Dashboard() {
               </div>
             </li>
             <li className="relative pl-6">
-              <span className="absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-brand-primary-dark"></span>
+              <span className="absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-[#4A5535]"></span>
               <div className="flex justify-between gap-4">
 
                 <div className="max-w-[70%]">
@@ -146,7 +146,8 @@ export default function Dashboard() {
               </div>
             </li>
           </ul>
-          <button className="mt-6 w-full rounded-lg bg-brand-primary-light py-2 text-sm font-medium text-brand-primary">
+          <button className="mt-6 w-full rounded-lg bg-[#8B9A6B] py-2 text-sm font-medium text-[#626F47]">
+
             Duration: 3 hours 45 min
           </button>
 
