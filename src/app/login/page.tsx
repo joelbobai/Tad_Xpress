@@ -1,26 +1,17 @@
 "use client";
 import { useState } from "react";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
+
 import Link from "next/link";
-import { useApp } from "@/context/AppContext";
 
 export default function Login() {
   const router = useRouter();
-  const searchParams = useSearchParams();
-  const role = searchParams.get("role") || "user";
-  const { loginUser } = useApp();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    const ok = loginUser(email, password, role);
-    if (ok) {
-      const dash = role === "user" ? "/dashboard" : `/dashboard/${role}`;
-      router.push(dash);
-    } else {
-      alert("Invalid credentials");
-    }
+    router.push("/dashboard");
   };
 
   return (
