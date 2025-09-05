@@ -3,7 +3,6 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 
 import Link from "next/link";
-import Image from "next/image";
 
 export default function Login() {
   const router = useRouter();
@@ -19,12 +18,10 @@ export default function Login() {
     <div className="flex min-h-screen items-center justify-center bg-[#FEFAE0] p-4">
       <div className="grid w-full max-w-4xl grid-cols-1 overflow-hidden rounded-xl bg-white shadow-lg md:grid-cols-2">
         <div className="relative hidden md:block">
-          <Image
-            src="/abstract-geometric-pattern.png"
+          <img
+            src="https://images.unsplash.com/photo-1619741982598-7cb8a7959476?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3Dg"
             alt="Background"
-            fill
-            className="object-cover"
-            priority
+            className="h-full w-full object-cover"
           />
           <div className="absolute inset-0 flex flex-col items-center justify-center bg-white/60 px-8 text-center backdrop-blur-md">
             <h2 className="text-4xl font-bold text-[#626F47]">Welcome Back</h2>
