@@ -1,17 +1,17 @@
 "use client";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-
 import Link from "next/link";
 
 export default function Login() {
   const router = useRouter();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [role, setRole] = useState("user");
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    router.push("/dashboard");
+    router.push(`/${role}/dashboard`);
   };
 
   return (
@@ -35,6 +35,25 @@ export default function Login() {
             Login to TadXpress
           </h1>
           <form onSubmit={handleSubmit} className="space-y-4">
+            <div className="flex justify-center gap-4">
+              {[
+                { value: "user", label: "User" },
+                { value: "rider", label: "Rider" },
+                { value: "admin", label: "Admin" },
+              ].map((opt) => (
+                <label key={opt.value} className="flex items-center gap-1 text-sm">
+                  <input
+                    type="radio"
+                    name="role"
+                    value={opt.value}
+                    checked={role === opt.value}
+                    onChange={(e) => setRole(e.target.value)}
+                    className="text-[#626F47]"
+                  />
+                  {opt.label}
+                </label>
+              ))}
+            </div>
             <input
               type="email"
               placeholder="Email"
