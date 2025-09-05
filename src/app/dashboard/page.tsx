@@ -106,23 +106,39 @@ export default function Dashboard() {
         {/* Current trip */}
         <div className="rounded-xl bg-white p-4 shadow">
           <h2 className="mb-4 text-lg font-semibold text-brand-primary-dark">Current trip</h2>
-          <ul className="space-y-2 text-sm">
-            <li>
-              <p className="text-gray-500">Departure</p>
-              <p className="font-medium">Poznan, Bus Station</p>
-              <p className="text-xs text-gray-400">12:45 AM</p>
+          <ul className="relative ml-4 space-y-6 text-sm before:absolute before:left-0 before:top-0 before:h-full before:w-0.5 before:bg-brand-primary-light before:content-['']">
+            <li className="relative pl-6">
+              <span className="absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-brand-primary"></span>
+              <div className="flex justify-between gap-4">
+                <div className="max-w-[70%]">
+                  <p className="text-gray-500">Departure</p>
+                  <p className="font-medium">Poznan, Bus Station</p>
+                </div>
+                <p className="text-xs text-gray-400">12:45 AM</p>
+              </div>
             </li>
-            <li>
-              <p className="text-gray-500">Stop</p>
-              <p className="font-medium">Berlin Airport BER, T1/2</p>
+            <li className="relative pl-6">
+              <span className="absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-brand-accent"></span>
+              <div className="flex justify-between gap-4">
+                <div className="max-w-[70%]">
+                  <p className="text-gray-500">Stop</p>
+                  <p className="font-medium">Berlin Airport BER, T 1/2</p>
+                </div>
+                <p className="text-xs text-gray-400">4:05 AM</p>
+              </div>
             </li>
-            <li>
-              <p className="text-gray-500">Arrival</p>
-              <p className="font-medium">Berlin Südkreuz</p>
-              <p className="text-xs text-gray-400">4:30 AM</p>
+            <li className="relative pl-6">
+              <span className="absolute -left-1.5 top-1 h-3 w-3 rounded-full bg-brand-primary-dark"></span>
+              <div className="flex justify-between gap-4">
+                <div className="max-w-[70%]">
+                  <p className="text-gray-500">Arrival</p>
+                  <p className="font-medium">Berlin Südkreuz</p>
+                </div>
+                <p className="text-xs text-gray-400">4:30 AM</p>
+              </div>
             </li>
           </ul>
-          <button className="mt-4 w-full rounded-lg bg-brand-primary-light py-2 text-sm text-brand-primary">
+          <button className="mt-6 w-full rounded-lg bg-brand-primary-light py-2 text-sm font-medium text-brand-primary">
             Duration: 3 hours 45 min
           </button>
         </div>
