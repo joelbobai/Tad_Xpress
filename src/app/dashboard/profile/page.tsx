@@ -2,6 +2,7 @@
 
 import { useState, type FormEvent } from "react";
 
+
 interface ReadOnlyFieldProps {
   label: string;
   value: string;
@@ -30,6 +31,7 @@ function ReadOnlyField({
   );
 }
 
+
 export default function ProfilePage() {
   const [currentPassword, setCurrentPassword] = useState("");
   const [newPassword, setNewPassword] = useState("");
@@ -50,6 +52,7 @@ export default function ProfilePage() {
   };
 
   return (
+
     <div className="mx-auto max-w-2xl space-y-8">
       <div className="rounded-lg bg-white p-6 shadow">
         <h1 className="mb-6 text-3xl font-bold text-[#626F47]">Profile</h1>
@@ -76,6 +79,7 @@ export default function ProfilePage() {
         className="space-y-4 rounded-lg bg-white p-6 shadow"
       >
         <h2 className="text-2xl font-semibold text-[#626F47]">
+
           Reset Password
         </h2>
         <div>
@@ -116,7 +120,9 @@ export default function ProfilePage() {
         </div>
         <button
           type="submit"
+
           className="rounded-md bg-[#626F47] px-4 py-2 font-medium text-white hover:bg-[#525d43]"
+
         >
           Change Password
         </button>
