@@ -1,11 +1,13 @@
 "use client";
 import { Clock, MapPin, Star, TrendingUp, Bus, ArrowUpRight } from "lucide-react";
+import Protected from "@/components/Protected";
 
 export default function Dashboard() {
   const blueDays = [2, 10, 23, 29];
   const greenDays = [4, 15, 32];
   return (
-    <main className="space-y-6">
+    <Protected roles={["user"]}>
+      <main className="space-y-6">
       {/* Section 1: stats */}
       <section className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
         {/* Total trips */}
@@ -269,6 +271,7 @@ export default function Dashboard() {
           </ul>
         </div>
       </section>
-    </main>
+      </main>
+    </Protected>
   );
 }
